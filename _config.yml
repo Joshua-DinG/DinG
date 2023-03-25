@@ -8,9 +8,7 @@
 # Site settings
 title: Joshua-DinG
 email: admin@admin.com
-description:  Write an awesome description for your new site here. You can edit this
-              line in _config.yml. It will appear in your document head meta (for
-              Google search results) and in your feed.xml site description.
+description:  小孩才分对错，成人只看利弊。
 baseurl: "/DinG" # the subpath of your site, e.g. /blog
 url: "http://xxxxx.com" # the base hostname & protocol for your site
 twitter_username: DinG
