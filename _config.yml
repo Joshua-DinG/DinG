@@ -16,3 +16,5 @@ github_username:  DinG
 
 # Build settings
 markdown: kramdown
+highlight_theme: tomorrow-night
+
