@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "OpenWRT云编译"
-date:   2023-03-26 11:49:45 +0200
+date:   2023-03-30 11:49:45 +0200
 categories: jekyll update
 highlight_theme: tomorrow-night
 ---
