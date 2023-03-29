@@ -16,5 +16,9 @@ github_username:  DinG
 
 # Build settings
 markdown: kramdown
-highlight_theme: tomorrow-night
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 
