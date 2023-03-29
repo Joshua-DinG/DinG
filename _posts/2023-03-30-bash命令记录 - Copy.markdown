@@ -14,5 +14,3 @@ find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name
 {% highlight ruby %}
 find ./cs/a/* -type f -name "*.*" -print0 | xargs -0 -I{} mv {} ./cs/a/
 {% endhighlight %}
-
-1
