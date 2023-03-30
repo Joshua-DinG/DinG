@@ -6,15 +6,12 @@ categories: jekyll update
 ---
 删除路径下标注以外的所有文件，`!`删除与指定扩展名不匹配的所有文件，`-type f`此选项指定搜索中应仅包含文件，而不包含目录。
 <pre><code>
-{% highlight ruby %}
 find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name "*.vmdk" \) -delete
-{% endhighlight %}
 </code></pre>
-<pre><code>This is a code block following a header.</code></pre>
 
-移动路径下的文件到指定目录，
-{% highlight ruby %}
+<h4>移动路径下的文件到指定目录，</h4>
+<pre><code>
 find ./cs/a/* -type f -name "*.*" -print0 | xargs -0 -I{} mv {} ./cs/a/
-{% endhighlight %}
+</code></pre>
 
     
