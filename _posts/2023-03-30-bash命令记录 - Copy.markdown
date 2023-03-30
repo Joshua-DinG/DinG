@@ -5,7 +5,7 @@ date:   2023-03-29 23:05:45 +0200
 categories: jekyll update
 highlight_theme: tomorrow-night
 ---
-删除路径下标注以外的所有文件，'!'删除与指定扩展名不匹配的所有文件，'-type f'此选项指定搜索中应仅包含文件，而不包含目录。
+删除路径下标注以外的所有文件，`!`删除与指定扩展名不匹配的所有文件，`-type f`此选项指定搜索中应仅包含文件，而不包含目录。
 {% highlight ruby %}
 find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name "*.vmdk" \) -delete
 {% endhighlight %}
