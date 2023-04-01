@@ -2,7 +2,7 @@ def replace_line(file_path, line_num, new_line):
     with open(file_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-    lines[line_num - 1] = new_line
+    lines[line_num-1] = new_line
 
     with open(file_path, 'w', encoding='utf-8') as f:
         for line in lines:
