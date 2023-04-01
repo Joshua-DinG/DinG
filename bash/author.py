@@ -1,13 +1,9 @@
 def modify_html(file_path, line_num, new_line):
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, 'r+', encoding='utf-8') as f:
         lines = f.readlines()
-    if line_num <= len(lines):
-        lines[line_num-1] = new_line
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.writelines(lines)
-            print(f"成功替换第{line_num}行")
-    else:
-        print(f"文件{file_path}中没有第{line_num}行")
+        lines[line_num - 1] = new_line
+        f.seek(0)
+        f.writelines(lines)
 
 if __name__ == '__main__':
     # 示例1：替换第708行
