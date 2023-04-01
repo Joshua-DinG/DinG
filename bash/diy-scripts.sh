@@ -44,7 +44,8 @@ cat << EOF | sh
   git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/luci-theme-argon
   # git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/lean/luci-app-argon-config
   curl -f -L https://github.com/Joshua-DinG/Build-OpenWRT/raw/main/firmware/banner/banner -o ./package/base-files/files/etc/banner
-  curl -f -L https://github.com/Joshua-DinG/Build-OpenWRT/raw/main/argon/bg1.jpg -o ./package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg      
+  curl -f -L https://github.com/Joshua-DinG/Build-OpenWRT/raw/main/argon/bg1.jpg -o ./package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+  curl https://raw.githubusercontent.com/Joshua-DinG/DinG/main/bash/123.py | python3 -
   #svn co https://github.com/Joshua-DinG/Build-OpenWRT/trunk/firmware/banner ./package/base-files/files/etc/
   #rm -rf ./package/base-files/files/etc/.svn/
   svn co https://github.com/Joshua-DinG/Build-OpenWRT/trunk/argon/video/default ./package/luci-theme-argon/htdocs/luci-static/argon/background/
