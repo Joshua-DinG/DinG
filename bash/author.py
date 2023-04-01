@@ -14,7 +14,8 @@ if __name__ == '__main__':
     file_path = './feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm'
     line_num = 708
     new_line = '<tr><td width="33%"><%:Kernel Version%></td><td><%=unameinfo.release or "?"%></span><span style="color:#00FF00;"> Plus</span></td></tr>\n'
-    insert_line(file_path, line_num, new_line)
+    replace_line(file_path, line_num, new_line)
+
 
 if __name__ == '__main__':
     # 示例2：在第712行后插入一行
