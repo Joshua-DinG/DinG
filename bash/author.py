@@ -1,3 +1,14 @@
+def replace_line(file_path, line_num, new_line):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    lines[line_num - 1] = new_line
+
+    with open(file_path, 'w', encoding='utf-8') as f:
+        for line in lines:
+            f.write(line)
+
+
 def insert_line(file_path, line_num, new_line):
     with open(file_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -16,8 +27,6 @@ if __name__ == '__main__':
     new_line = '<tr><td width="33%"><%:Kernel Version%></td><td><%=unameinfo.release or "?"%></span><span style="color:#00FF00;"> Plus</span></td></tr>\n'
     replace_line(file_path, line_num, new_line)
 
-
-if __name__ == '__main__':
     # 示例2：在第712行后插入一行
     file_path = './feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm'
     line_num = 712
