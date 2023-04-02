@@ -4,11 +4,11 @@ device=$1
 ui=$2
 diy=$3
 if [ "$device" = "Build-x86" ]; then
-  echo "$(cat ./firmware/X86 ./firmware/Generic)" >> .config
+  echo "$(cat ./firmware/X86 $github_root/firmware/Generic)" >> .config
 elif [ "$device" = "Build-R2S" ]; then
-   echo "$(cat ./firmware/R2S ./firmware/Generic)" >> .config
+   echo "$(cat ./firmware/R2S $github_root/firmware/Generic)" >> .config
 elif [ "$device" = "Build-R4S" ]; then
-  echo "$(cat ./firmware/R4S ./firmware/Generic)" >> .config
+  echo "$(cat ./firmware/R4S $github_root/firmware/Generic)" >> .config
 fi
 
 if [ "$ui" = "true" ]; then
