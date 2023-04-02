@@ -1,7 +1,7 @@
 #!/bin/sh
 
 device=$1
-ui=$2
+core=$2
 diy=$5
 if [ "$device" = "Build-x86" ]; then
   echo "$(cat "$GITHUB_WORKSPACE/firmware/X86" "$GITHUB_WORKSPACE/firmware/Generic")" >> ./.config
@@ -11,7 +11,7 @@ elif [ "$device" = "Build-R4S" ]; then
   echo "$(cat "$GITHUB_WORKSPACE/firmware/R4S" "$GITHUB_WORKSPACE/firmware/Generic")" >> ./.config
 fi
 
-if [ "$ui" = "true" ]; then
+if [ "$core" = "true" ]; then
   sed -i s/5.15/6.1/g  ./target/linux/x86/Makefile
 fi
 
