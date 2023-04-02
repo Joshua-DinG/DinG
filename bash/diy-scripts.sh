@@ -39,7 +39,6 @@ fi
 #svn co https://github.com/Joshua-DinG/Build-OpenWRT/trunk/firmware/banner ./package/base-files/files/etc/
 #rm -rf ./package/base-files/files/etc/.svn/
 
-
 if [ "$device" = "Build-x86" ]; then
   echo "$(cat "$GITHUB_WORKSPACE/firmware/X86" "$GITHUB_WORKSPACE/firmware/Generic")" >> ./.config
 elif [ "$device" = "Build-R2S" ]; then
@@ -60,8 +59,6 @@ if [ -n "$4" ]; then
   sed -i "s/192.168.1.1/${file_name4}/g" package/base-files/files/bin/config_generate
 fi
 
-
 if [ "$5" = "true" ]; then
   sed -i s/5.15/6.1/g  ./target/linux/x86/Makefile
 fi
-
