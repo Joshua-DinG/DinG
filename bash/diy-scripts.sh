@@ -23,8 +23,10 @@ cat << EOF | sh
   # ID
   #sed -i "s/DISTRIB_REVISION='R.*.*.[0-9]/& Compiled by Jason/" package/lean/default-settings/files/zzz-default-settings
   rm -rf ./package/base-files/files/etc/banner
-  rm -rf ./feeds/luci/themes/luci-theme-argon
+  rm -rf ./feeds/luci/themes
+  rm -rf ./feeds/luci/applications/luci-app-argon-config
   rm -rf ./feeds/haibo/luci-theme-argon
+  rm -rf ./feeds/haibo/luci-app-argon-config
   git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/luci-theme-argon
   git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/lean/luci-app-argon-config
   curl -f -L https://github.com/Joshua-DinG/Build-OpenWRT/raw/main/firmware/banner/banner -o ./package/base-files/files/etc/banner
