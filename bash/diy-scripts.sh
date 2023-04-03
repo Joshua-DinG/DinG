@@ -6,15 +6,15 @@ if [ "$1" = "diy" ]; then
 cat << EOF | sh
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile 
 sed -i 's/os.date(/&"%Y-%m-%d %H:%M:%S"/' package/lean/autocore/files/x86/index.htm
-sed -i -e '$i\' -e "s/Year/$(TZ=':Asia/Shanghai' date '+%Y')/g" package/base-files/files/etc/banner
 rm -rf ./package/base-files/files/etc/banner
 rm -rf ./feeds/luci/themes
 rm -rf ./feeds/luci/applications/luci-app-argon-config
 rm -rf ./feeds/haibo/luci-theme-argon
 rm -rf ./feeds/haibo/luci-app-argon-config
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/lean/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/luci-app-argon-config
 curl -f -L https://github.com/Joshua-DinG/Build-OpenWRT/raw/main/firmware/banner/banner -o ./package/base-files/files/etc/banner
+sed -i -e '$i\' -e "s/Year/$(TZ=':Asia/Shanghai' date '+%Y')/g" package/base-files/files/etc/banner
 curl -f -L https://github.com/Joshua-DinG/Build-OpenWRT/raw/main/argon/bg1.jpg -o ./package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 curl https://raw.githubusercontent.com/Joshua-DinG/DinG/main/bash/123.py | python3 -
 svn co https://github.com/Joshua-DinG/Build-OpenWRT/trunk/argon/video/default ./package/luci-theme-argon/htdocs/luci-static/argon/background/
