@@ -14,4 +14,7 @@ find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name
 find ./cs/a/* -type f -name "*.*" -print0 | xargs -0 -I{} mv {} ./cs/a/
 </code></pre>
 
-    
+<h6>删除目录里带luci-theme字符的文件，</h5>
+pre><code>
+find ./small-package -name "*luci-theme*" -type d -exec rm -rf {} \;
+</code></pre>   
