@@ -9,8 +9,8 @@ sed -i 's/os.date(/&"%Y-%m-%d %H:%M:%S"/' package/lean/autocore/files/x86/index.
 rm -rf ./package/base-files/files/etc/banner
 rm -rf ./feeds/luci/themes
 rm -rf ./feeds/luci/applications/luci-app-argon-config
-rm -rf ./feeds/haibo/luci-theme-argon
-rm -rf ./feeds/haibo/luci-app-argon-config
+find ./feeds/chajian1 -name "*luci-theme*" -type d -exec rm -rf {} \;
+find ./feeds/chajian2 -name "*luci-theme*" -type d -exec rm -rf {} \;
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/luci-app-argon-config
 curl -f -L https://github.com/Joshua-DinG/Build-OpenWRT/raw/main/firmware/banner/banner -o ./package/base-files/files/etc/banner
