@@ -30,5 +30,5 @@ if __name__ == '__main__':
     # 示例2：在第713行插入一行
     file_path = './package/lean/autocore/files/x86/index.htm'
     line_num = 750
-    new_line = '<tr style="background-color: #0d1117;"><td width="33%"><span style="color:#3fb937;">Nice To Meet You !</a>  </td><td><a href="https://github.com/Joshua-DinG/Build-OpenWRT"><span style="color:#3fb937;">Joshua-DinG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ:1009721777</a></td></tr>\n'
+    new_line = '<tr style="background-color: #0d1117;"><td width="33%"><span style="color:#3fb937;">Nice To Meet You !</a>  </td><td><a href="https://github.com/Joshua-DinG/Build-OpenWRT"><span style="color:#3fb937;">Josh-DinG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ:1009721777</a></td></tr>\n'
     insert_line(file_path, line_num-1, new_line)
